@@ -18,7 +18,7 @@ dotnet dev-certs https  -ep $env:USERPROFILE\.aspnet\https\DockerAPI.pfx -p pass
 
 # after all the above, you can build you docker image
 
-# Then you can run your imgae 
+# Then you can run your imgae(use the bellow commmand)
 
 docker run 
 -p 8080:80 -p 8081:443   
