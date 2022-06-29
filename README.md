@@ -1,19 +1,19 @@
 # First part:generate a https certs
-# how to generate a https certs by using dotnet
-# $env:USERPROFILE is C:\Users\yournamefolder
-# this new cert you can find it in C:\Users\yournamefolder\.aspnet\https\
+* how to generate a https certs by using dotnet
+* $env:USERPROFILE is C:\Users\yournamefolder
+* this new cert you can find it in C:\Users\yournamefolder\.aspnet\https\
 dotnet dev-certs https  -ep $env:USERPROFILE\.aspnet\https\DockerAPI.pfx -p passw0rd!
 
 # Second part: trust
-# Then execute trust
-dotnet dev-certs https --trust
+* Then execute trust
+* dotnet dev-certs https --trust
 
 # Third part: add secrets
-# user usersecrets provided by microsoft
-1 in the .csproj file <propertyGroup> insert <UserSecretsId>GUID</UserSecretsId>
-2 use command line to go to you code directory
-3 in the code directory, execute the command: dotnet user-secrets set "Kestrel:Certificates:Development:Password" "passw0rd!"
-4 after executing you can find a GUID folder in C:\Users\youname\AppData(this may be a hideen folder)\Roaming\Microsoft\UserSecrets\GUID. It is a secret.json file
+* user usersecrets provided by microsoft
+* 1 in the .csproj file <propertyGroup> insert <UserSecretsId>GUID</UserSecretsId>
+* 2 use command line to go to you code directory
+* 3 in the code directory, execute the command: dotnet user-secrets set "Kestrel:Certificates:Development:Password" "passw0rd!"
+* 4 after executing you can find a GUID folder in C:\Users\youname\AppData(this may be a hideen folder)\Roaming\Microsoft\UserSecrets\GUID. It is a secret.json file
 
 
 # after all the above, you can build you docker image
