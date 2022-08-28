@@ -40,7 +40,7 @@
 The secrets file is json file and its path: **C:\Users\youname\AppData(this may be a hideen folder)\Roaming\Microsoft\UserSecrets\GUID**    
  
  
- # EF 
+ # EF code first
  * ```dotnet ef migrations add initialmigration```
    * only if you get an error when use this command, please use ```dotnet tool install --gloabl dotnet-ef```. Plase add the detail version of dotnet-ef when you get an error
  * ```dotnet ef database update```
